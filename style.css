@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sevillana&family=Ubuntu:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    /* 1rem=10px */
+    font-family: 'Poppins', sans-serif;
+}
+
+
+:root{
+    --primary-color: #000839;
+    --primary-shades: #00020b;
+    --para-color:#80849c;
+    --helper-color:#1264fa;
+    --white: #fff;
+    --bg-color:#e6e6eb;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+img{
+    display: inline-block;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+h1,h2,h3,h4{
+    color: var(--primary-shades);
+}
+
+.para{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--para-color);
+
+}
+
+.header{
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5.4rem;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    font-size: 1.5rem;
+}
+
+.navbar-list .navbar-btn{
+    padding: 1.2rem 2.4rem;
+    background-color: var(--white);
+    border: 1px solid var(--helper-color);
+    color: var(--helper-color);
+    border-radius: 5rem;
+    transition: all 0.2s ease-in;
+
+
+}
+.navbar-list .navbarlink{
+    transition: all 0.2s ease-in;
+    
+}
+
+.navbar-list .navbarlink:hover,.navbar-list .navbarlink:active{
+    color: var(--helper-color);
+}
+
+.navbar-btn:hover , .navbar-btn:active{
+    background-color: var(--helper-color);
+    color: var(--white);
+}
+
+
+.navbarlink{
+    text-transform: uppercase;
+}
+
+.mobile-nav-icon{
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.mobile-navbar-btn{
+    display: none;
+}
+
+
+
+.mobile-nav-icon[name="close"]{
+    display: none;
+}
+
+.section{
+    padding: 3.6rem 0;
+}
+.container{
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 3.2rem;
+}
+
+.grid{
+    display: grid;
+    gap: 9.6rem;
+}
+
+.grid-two-column{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.btn{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding: 1.6rem 3.2rem;
+    border-radius: 10rem;
+    background-color: var(--helper-color);
+    color: var(--white);
+    transition: all 0.2s ease-in;
+}
+
+.btn:hover , .btn:active{
+    transform: scale(1.05);
+}
+
+.section-hero{
+    position: relative;
+}
+
+.section-hero::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 25.6rem;
+    right: 0;
+    width: 30%;
+    height: 40%;
+    background:var(--bg-color) ;
+    z-index: -1;
+}
+
+.p-head{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.section-hero{
+    margin-top: 2rem;
+    margin-bottom: 3.2rem;
+}
+
+
+.hero-icons{
+    margin-top: 4.2rem;
+}
+
+.hero-icons .icon{
+    font-size: 4.2rem;
+    position: relative;
+}
+
+.hero-icons .icon::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    background-color: var(--helper-color);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.hero-icons h2{
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+
+.section-hero .hero-icon-style .para{
+    line-height: 1.6rem;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+
+.hero-image{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hero-image img{
+    height: 100%;
+    box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.hero-img-overlay{
+    position: absolute;
+    bottom: 0;
+    left: -10%;
+    background-color: var(--primary-color);
+    padding-inline-start: 4rem;
+
+    
+
+}
+
+.hero-img-overlay .para{
+    color: var(--white);
+    margin: 0;
+}
+
+.hero-img-overlay .para:nth-child(2){
+    margin: 0;
+    font-weight: bold;
+}
+
+
+
+/* ----------------------media queries------------------------- */
+
+@media (max-width:830px){
+    .container{
+        padding: 0 5rem;
+    }
+    html{
+        font-size: 56.25%;
+
+
+    }
+    .hero-image img{
+        height: 80%;
+    }
+
+}
+
+@media (max-width:970px){
+    .section-hero .grid-two-column{
+        grid-template-columns: 1fr;
+    }
+
+    .section-hero .hero-icons .grid-two-column{
+        grid-template-columns: 1fr 1fr;
+    }
+    .btn1{
+        margin-top: 12px;
+    }
+    .hero-image{
+        display: flex;
+        flex-direction: column;
+        position: unset;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-image img{
+        display: flex;
+        height: 100%;
+        width: 95%;
+    }
+    
+    .hero-img-overlay{
+        /* position: absolute;
+        bottom: -25rem;
+        left: 6.5rem; */
+        background-color: var(--primary-color);
+        width: 95%;
+        margin: 3rem auto;
+        position: unset;
+    
+        
+    
+    }
+    .section-hero::before{
+        display: none;
+    }
+
+    .header{
+        background-color: var(--primary-shades);
+        height: 50rem;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -5.5rem;
+        transition: all 0.8s linear;
+        position: sticky;
+        top: -2.5rem;
+        z-index: 1;
+    }
+
+    .navbar{
+        display: inline-block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .navbar-list{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .logo{
+        display: inline-block;
+
+        /* margin-top: -14rem; */
+    }
+    .mobile-navbar-btn{
+        color: white;
+        display: inline-block;
+        position: absolute;
+        top: 4.6rem;
+        right: 2rem;
+    }
+    .mobile-nav-icon{
+        color: var(--white);
+    }
+    .navbar-resp{
+        display: none;
+        
+    }
+    
+    .logo-resp{
+        display: none;
+
+    }
+    .navbar-list-resp{
+        display: none;
+        
+        /* margin-top: 2rem; */
+    }
+    .head-resp{
+        height: 11rem;
+    }
+
+}
+
